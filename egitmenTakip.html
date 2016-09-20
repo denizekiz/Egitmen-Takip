@@ -1,0 +1,20 @@
+<div class="row">
+
+		<div class="col-xs-12">
+		<h3>Eğitimlerim </h3>	Ara: <label><input class="form-control"  ng-model="searchText.$"></label> Eğitmen: <label><input type="text" class="form-control" ng-model="searchText.egitmen" ></label>
+			<div class="panel panel-info" ng-repeat="egitim in model| filter:searchText">
+			<div class="panel-heading">{{ egitim.date}} - {{egitim.finDateT}}</div>
+	 			 <div class="panel-body">
+	   			  Durumu:  <span class="label label-warning">{{egitim.durum}}</span>
+ Lokasyon:{{	egitim.lokasyon }}  <a href="./#/egitimler/{{egitim._id}}" class="btn btn-success" ng-show="egitim.durum=='tamamlandı'">Eğitimi Tamamla</a>
+	  			</div>
+			</div>
+		</div>
+
+
+			<div class="col-xs-12">
+				{{ 2+ 2}}
+
+				<pre>{{modelAsJson}}</pre>
+			</div>
+		</div>
